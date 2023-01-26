@@ -288,9 +288,10 @@ img {
 .backToTop {
   display: none;
   position: fixed;
-  bottom: 3%;
-  right: 3%;
-  width: 150px;
+  transform: translate(50%,-50%);
+  bottom: 1%;
+  right: 50%;
+  width: 50px;
   font-family: "Poppins", sans-serif;
   color: var(--blue);
   font-weight: 600;
@@ -300,13 +301,15 @@ img {
   transform: rotate(90deg);
 }
 .topVisible {
+  opacity: 0.8;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background-color: transparent;
   border: 2px solid var(--blue);
   background-color: var(--pink);
-  animation: fadeIn 1s;
+  animation: fadeInTwo 1s;
+  border-radius: 5px;
   cursor: pointer;
   padding: 5px;
 }
@@ -1056,14 +1059,11 @@ footer {
     opacity: 1;
   }
 }
-@keyframes fadeOut {
+@keyframes fadeInTwo {
   0% {
-    opacity: 1;
-  }
-  99% {
     opacity: 0;
   }
   100% {
-    display: none;
+    opacity: 0.8;
   }
 }
